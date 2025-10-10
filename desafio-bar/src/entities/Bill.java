@@ -6,31 +6,46 @@ public class Bill {
     public int barbecue;
     public int softDrink;
 
-    public static double MENS_TICKET = 10.0;
-    public static double WOMENS_TICKET = 8.0;
-    public static double COVER_PRICE = 4.0;
-    public static double BEER_PRICE = 5.0;
-    public static double DRINK_PRICE = 3.0;
-    public static double BARBECUE_PRICE = 7.0;
+    public static final double MENS_TICKET = 10.00;
+    public static final double WOMENS_TICKET = 8.00;
+    public static final double COVER_PRICE = 4.00;
+    public static final double BEER_PRICE = 5.00;
+    public static final double DRINK_PRICE = 3.00;
+    public static final double BARBECUE_PRICE = 7.00;
 
     public double cover() {
-        
-        return 0;
+        return (feeding() > 30.0) ? 0.00 : COVER_PRICE;
+    }
+
+    public String coverAsString() {
+        return (feeding() > 30) 
+        ? "ISENTO DE COUVERT" 
+        : String.format("COUVERT = R$ %.2f", COVER_PRICE);
     }
 
     public double feeding() {
-
-        return 0;
+        return (beer * BEER_PRICE) + (softDrink * DRINK_PRICE) + (barbecue * BARBECUE_PRICE);
     }
 
     public double ticket() {
-
-        return 0;
+        if(Character.toUpperCase(gender) == 'M') {
+            return MENS_TICKET;
+        } else {
+            return WOMENS_TICKET;
+        }
     }
 
     public double total() {
+        return feeding() + cover() + ticket();
+    }
 
-        return 0;
+    @Override
+    public String toString() {
+        return String.format(
+            "\nRELATÓRIO\nCONSUMO = R$ %.2f\n%s\nINGRESSO = R$ %.2f\n\nVALOR A PAGAR = R$ %.2f",
+            feeding(), coverAsString(), ticket(), total()
+            );
+
     }
 
 }

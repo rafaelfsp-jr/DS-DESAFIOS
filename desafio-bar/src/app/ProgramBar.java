@@ -16,6 +16,10 @@ public class ProgramBar {
             bill.beer = sc.nextInt();   
             System.out.print("Quantidade de refrigerantes: ");
             bill.softDrink = sc.nextInt();
+            System.out.print("Quantidade de espetinhos: ");
+            bill.barbecue = sc.nextInt();
+
+            System.out.print(bill);
 
         }
     }
