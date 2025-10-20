@@ -19,6 +19,3 @@ Este repositório tem como objetivo:
 - 🧭 **Git & GitHub** para controle de versão  
 - 🛠️ IDEs sugeridas: IntelliJ IDEA, Eclipse ou VS Code
 
----
-
-## 🧾 Estrutura do Projeto

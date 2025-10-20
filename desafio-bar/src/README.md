@@ -1,4 +1,3 @@
-"// README do Desafio Bar" 
 # Desafio: Bar OO
 
 Repositório criado para versionar a solução do desafio **“Bar OO”** do curso DevSuperior.  

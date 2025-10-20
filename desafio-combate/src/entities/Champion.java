@@ -1,8 +1,11 @@
+package entities;
+
 public class Champion {
-    private String name;
+
+    private final String name;
+    private final int attack;
+    private final int armor;
     private int life;
-    private int attack;
-    private int armor;
 
     public Champion(String name, int life, int attack, int armor) {
         this.name = name;
@@ -28,12 +31,30 @@ public class Champion {
     }
 
     public void takeDamage(Champion other) {
-
+        int damage = other.getAttack() - this.armor;
+        if (damage < 1) {
+            damage = 1;
+        }
+        this.life -= damage;
+        if (this.life < 0) {
+            this.life = 0;
+        }
     }
 
     public String status() {
-        return "";
+        if (life == 0) {
+            return String.format(
+                    "%s: %d de vida (morreu)",
+                    name,
+                    life
+            );
+        } else {
+            return String.format(
+                    "%s: %d de vida",
+                    name,
+                    life
+            );
+        }
+
     }
-
-
 }
