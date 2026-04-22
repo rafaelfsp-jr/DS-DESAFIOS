@@ -1,14 +1,14 @@
 package entities;
 
-public class Adress {
+public class Address {
 
     private String email;
     private String phone;
 
-    public Adress() {
+    public Address() {
     }
 
-    public Adress(String email, String phone) {
+    public Address(String email, String phone) {
         this.email = email;
         this.phone = phone;
     }

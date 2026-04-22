@@ -8,17 +8,17 @@ public class Department {
     private String name;
     private int payDay;
 
-    private Adress adress;
+    private Address address;
 
-    List<Employee> employees = new ArrayList<>();
+    private final List<Employee> employees = new ArrayList<>();
 
     public Department() {
     }
 
-    public Department(String name, int payDay, Adress adress) {
+    public Department(String name, int payDay, Address address) {
         this.name = name;
         this.payDay = payDay;
-        this.adress = adress;
+        this.address = address;
     }
 
     public String getName() {
@@ -37,12 +37,12 @@ public class Department {
         this.payDay = payDay;
     }
 
-    public Adress getAdress() {
-        return adress;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(Adress adress) {
-        this.adress = adress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public List<Employee> getEmployees() {
