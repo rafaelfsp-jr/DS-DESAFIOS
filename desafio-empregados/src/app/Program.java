@@ -46,7 +46,7 @@ public class Program {
     private static void showReport(Department dept) {
         System.out.println("");
         System.out.println("FOLHA DE PAGAMENTO: ");
-        System.out.println("Departamento " + dept.getName() + " = R$ " + dept.payroll());
+        System.out.printf("Departamento %s R$ %.2f%n", dept.getName(), dept.payroll());
         System.out.println("Pagamento realizado no dia " + dept.getPayDay());
         System.out.println("Funcionários: ");
         for (Employee emp : dept.getEmployees()) {
