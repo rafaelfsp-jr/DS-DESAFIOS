@@ -1,18 +1,40 @@
-## Getting Started
+## DESAFIO: Plataforma de ensino
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Solução do desafio “Plataforma de ensino” do curso DevSuperior.
+Este é um projeto em Java desenvolvido para gerenciar aulas de um curso e calcular a duração total, aplicando conceitos fundamentais de Orientação a Objetos como herança, classes abstratas e polimorfismo.
 
-## Folder Structure
+## Funcionalidades
 
-The workspace contains two folders by default, where:
+O programa realiza a leitura de N aulas de um curso, onde cada aula pode ser um conteúdo em vídeo ou uma tarefa. Ao final, calcula automaticamente a duração total do curso em segundos.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Requisitos Atendidos:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Implementação de uma classe abstrata Lesson.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Implementação de metódos abstratos.
 
-## Dependency Management
+- Criação de subclasses Video e Task.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Cálculo da duração total utilizando polimorfismo.
+
+- Uso de listas para armazenamento dinâmico das aulas.
+
+- Leitura de dados via terminal com Scanner.
+
+## Estrutura de Entidades
+
+A arquitetura do projeto segue o modelo de herança abaixo:
+
+- Lesson: Classe abstrata que define o título da aula e o método abstrato duration().
+
+- Video: Representa uma aula em vídeo, contendo URL e duração em segundos.
+
+- Task: Representa uma tarefa, contendo descrição e quantidade de questões.
+
+
+
+Desafio proposto por DevSuperior
+
+Implementado por Rafael Passos👨‍💻
+
+🔗 https://github.com/rafaelfsp-jr
